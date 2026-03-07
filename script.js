@@ -1,4 +1,4 @@
-/* PORTFOLIO INTERACTIVITY*/
+/* PORTFOLIO INTERACTIVITY WITH FIREBASE CONTACT FORM */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!deleting && charIdx === current.length) {
-            typeSpeed = 2000; // pause at full word
+            typeSpeed = 2000;
             deleting = true;
         } else if (deleting && charIdx === 0) {
             deleting = false;
             phraseIdx = (phraseIdx + 1) % phrases.length;
-            typeSpeed = 400; // pause before next word
+            typeSpeed = 400;
         }
 
         setTimeout(typeLoop, typeSpeed);
@@ -119,20 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     skillFills.forEach(fill => skillObserver.observe(fill));
-
-    // CONTACT FORM (simple feedback)
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = form.querySelector('.form-submit');
-        btn.textContent = 'Message Sent!';
-        btn.style.background = 'linear-gradient(135deg, #00ff88, #00d4ff)';
-        setTimeout(() => {
-            btn.textContent = 'Send Message';
-            btn.style.background = '';
-            form.reset();
-        }, 3000);
-    });
 
     //PROFILE IMAGE FALLBACK
     const profileImg = document.getElementById('profileImg');
