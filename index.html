@@ -49,7 +49,8 @@
       </div>
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">⚡ View Projects</a>
-        <a href="#contact" class="btn btn-outline">✉ Contact Me</a>
+        <button class="btn btn-outline" id="heroGamesBtn">🔐 Crack the Code</button>
+        <a href="#contact" class="btn btn-primary">✉ Contact Me</a>
       </div>
     </div>
     <div class="hero-scroll-indicator">
@@ -492,7 +493,7 @@
     </div>
   </section>
 
-  <!--  TEACHING & COMMUNITY -->
+  <!--  COMMUNITY & TEACHING -->
   <section class="section" id="community">
     <div class="container">
       <div class="section-header reveal">
@@ -636,6 +637,24 @@
       </div>
     </div>
   </footer>
+
+  <!-- GAMES MODAL -->
+  <div class="modal-overlay" id="gameModal">
+    <div class="modal-content game-modal">
+      <button class="modal-close" id="closeGame">&times;</button>
+      <h2>Crack the Code</h2>
+      <p class="game-instructions">I'm thinking of a number between 1 and 100. Can you guess it?</p>
+      <div class="game-display">
+        <span>Attempts: <span id="attemptCount">0</span>/10</span>
+      </div>
+      <div class="game-input-group">
+        <input type="number" id="guessInput" min="1" max="100" placeholder="Enter your guess" />
+        <button class="btn btn-primary game-btn" id="submitGuess">Guess</button>
+      </div>
+      <p class="game-feedback" id="gameFeedback"></p>
+      <button class="btn btn-outline game-btn hidden" id="playAgain">Play Again</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

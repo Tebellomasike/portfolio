@@ -1,4 +1,4 @@
-/* PORTFOLIO INTERACTIVITY WITH FIREBASE CONTACT FORM */
+/* PORTFOLIO INTERACTIVITY WITH CONTACT FORM */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -170,5 +170,99 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ─── GUESS THE NUMBER GAME ────────────────
+    const gameModal = document.getElementById('gameModal');
+    const heroGamesBtn = document.getElementById('heroGamesBtn');
+    const closeGame = document.getElementById('closeGame');
+    const guessInput = document.getElementById('guessInput');
+    const submitGuess = document.getElementById('submitGuess');
+    const gameFeedback = document.getElementById('gameFeedback');
+    const attemptCount = document.getElementById('attemptCount');
+    const playAgain = document.getElementById('playAgain');
+
+    let targetNumber = 0;
+    let attempts = 0;
+    const maxAttempts = 10;
+    let gameActive = true;
+
+    function initGame() {
+        targetNumber = Math.floor(Math.random() * 100) + 1;
+        attempts = 0;
+        gameActive = true;
+        attemptCount.textContent = '0';
+        guessInput.value = '';
+        guessInput.disabled = false;
+        submitGuess.disabled = false;
+        gameFeedback.textContent = '';
+        gameFeedback.className = 'game-feedback';
+        playAgain.classList.add('hidden');
+        guessInput.focus();
+    }
+
+    function submitGuessHandler() {
+        if (!gameActive) return;
+
+        const guess = parseInt(guessInput.value);
+
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+            gameFeedback.textContent = 'Please enter a number between 1 and 100';
+            gameFeedback.className = 'game-feedback error';
+            return;
+        }
+
+        attempts++;
+        attemptCount.textContent = attempts;
+
+        if (guess === targetNumber) {
+            gameFeedback.textContent = `🎉 Congratulations! You cracked the code in ${attempts} attempts!`;
+            gameFeedback.className = 'game-feedback success';
+            gameActive = false;
+            guessInput.disabled = true;
+            submitGuess.disabled = true;
+            playAgain.classList.remove('hidden');
+        } else if (attempts >= maxAttempts) {
+            gameFeedback.textContent = `Game over! The number was ${targetNumber}. Better luck next time!`;
+            gameFeedback.className = 'game-feedback error';
+            gameActive = false;
+            guessInput.disabled = true;
+            submitGuess.disabled = true;
+            playAgain.classList.remove('hidden');
+        } else if (guess < targetNumber) {
+            gameFeedback.textContent = 'Too low! Try a higher number.';
+            gameFeedback.className = 'game-feedback info';
+        } else {
+            gameFeedback.textContent = 'Too high! Try a lower number.';
+            gameFeedback.className = 'game-feedback info';
+        }
+
+        guessInput.value = '';
+        guessInput.focus();
+    }
+
+    heroGamesBtn.addEventListener('click', () => {
+        gameModal.classList.add('active');
+        initGame();
+    });
+
+    closeGame.addEventListener('click', () => {
+        gameModal.classList.remove('active');
+    });
+
+    gameModal.addEventListener('click', (e) => {
+        if (e.target === gameModal) {
+            gameModal.classList.remove('active');
+        }
+    });
+
+    submitGuess.addEventListener('click', submitGuessHandler);
+
+    guessInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            submitGuessHandler();
+        }
+    });
+
+    playAgain.addEventListener('click', initGame);
 
 });
