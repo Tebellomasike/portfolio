@@ -1099,7 +1099,7 @@ img[data-src] {
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--accent);
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
