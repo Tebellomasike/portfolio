@@ -3,14 +3,78 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tebello Masike — Cybersecurity and Data Science Portfolio</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <!-- Primary Meta Tags -->
+        <title>Tebello Masike — Cybersecurity & Data Science Professional | Portfolio</title>
         <meta
             name="description"
-            content="Tebello Masike — Cybersecurity Enthusiast. Data Scientist Enthusiast, Penetration testing, cloud security, incident response, and threat hunting. Based in Lesotho."
+            content="Tebello Masike — Cybersecurity Enthusiast & Data Scientist specializing in penetration testing, cloud security, incident response, threat hunting, and machine learning. Based in Lesotho."
         />
+        <meta name="keywords" content="Cybersecurity, Data Science, Penetration Testing, Cloud Security, Incident Response, Threat Hunting, Machine Learning, SIEM, OCI, Python, Lesotho, Portfolio" />
+        <meta name="author" content="Tebello Masike" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://tebello-masike-prtfolio-vercel.app" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tebello-masike-prtfolio-vercel.app/" />
+        <meta property="og:title" content="Tebello Masike — Cybersecurity & Data Science Professional" />
+        <meta property="og:description" content="Cybersecurity Enthusiast & Data Scientist specializing in penetration testing, cloud security, and machine learning. Based in Lesotho." />
+        <meta property="og:image" content="https://tebello-masike-prtfolio-vercel.app/Asset/profile.jpeg" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Tebello Masike Portfolio" />
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://tebello-masike-prtfolio-vercel.app/" />
+        <meta name="twitter:title" content="Tebello Masike — Cybersecurity & Data Science Professional" />
+        <meta name="twitter:description" content="Cybersecurity Enthusiast & Data Scientist specializing in penetration testing, cloud security, and machine learning." />
+        <meta name="twitter:image" content="https://tebello-masike-prtfolio-vercel.app/Asset/profile.jpeg" />
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+        <link rel="apple-touch-icon" href="Asset/profile.jpeg" />
+        
+        <!-- Preconnect & Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" as="style" href="style.css" />
         <link rel="stylesheet" href="style.css" />
+        
+        <!-- Schema.org Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Tebello Masike",
+            "url": "https://tebello-masike-prtfolio-vercel.app",
+            "image": "https://tebello-masike-prtfolio-vercel.app/Asset/profile.jpeg",
+            "sameAs": [
+                "https://www.linkedin.com/in/tebello-masike-0501b3313"
+            ],
+            "jobTitle": "Cybersecurity & Data Science Enthusiast",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Open to Opportunities"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Lesotho"
+            },
+            "knowsAbout": [
+                "Cybersecurity",
+                "Data Science",
+                "Penetration Testing",
+                "Cloud Security",
+                "Incident Response",
+                "Threat Hunting",
+                "Machine Learning",
+                "Python",
+                "SIEM Analysis"
+            ]
+        }
+        </script>
     </head>
 
     <body>
@@ -100,9 +164,12 @@
                             <img
                                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 467'%3E%3Crect fill='%23070a0f' width='350' height='467'/%3E%3C/svg%3E"
                                 data-src="Asset/profile.jpeg"
-                                alt="Tebello Masike"
+                                alt="Tebello Masike - Cybersecurity and Data Science Professional based in Lesotho"
                                 class="about-image lazy"
                                 id="profileImg"
+                                loading="lazy"
+                                width="350"
+                                height="467"
                             />
                         </div>
                     </div>
@@ -620,8 +687,11 @@
                         <div class="cert-icon">
                             <img
                                 src="Asset/CompTIA.png"
-                                alt="🏅"
+                                alt="CompTIA A+ Certification badge"
                                 class="lazy"
+                                loading="lazy"
+                                width="80"
+                                height="80"
                             />
                         </div>
                         <h3>CompTIA A+ Certification</h3>
@@ -630,7 +700,14 @@
 
                     <div class="cert-card reveal">
                         <div class="cert-icon">
-                            <img src="Asset/ICS2.png" alt="🔗" class="lazy" />
+                            <img 
+                                src="Asset/ICS2.png" 
+                                alt="ISC2 Certified in Cybersecurity (CC) certification badge" 
+                                class="lazy" 
+                                loading="lazy"
+                                width="80"
+                                height="80"
+                            />
                         </div>
                         <h3>Certified in Cybersecurity (CC) by ISC²</h3>
                         <p class="cert-date">Feb 2025 — Aug 2025</p>
@@ -638,7 +715,14 @@
 
                     <div class="cert-card reveal">
                         <div class="cert-icon">
-                            <img src="Asset/Cisco.png" alt="🌐" class="lazy" />
+                            <img 
+                                src="Asset/Cisco.png" 
+                                alt="Cisco Introduction to Cybersecurity certification badge" 
+                                class="lazy" 
+                                loading="lazy"
+                                width="80"
+                                height="80"
+                            />
                         </div>
                         <h3>Introduction to Cybersecurity by NETCAD</h3>
                         <p class="cert-date">March 2025</p>
@@ -648,8 +732,11 @@
                         <div class="cert-icon">
                             <img
                                 src="Asset/Job_sim.png"
-                                alt="📋"
+                                alt="Deloitte Australia Cyber Job Simulation completion certificate"
                                 class="lazy"
+                                loading="lazy"
+                                width="80"
+                                height="80"
                             />
                         </div>
                         <h3>Deloitte Australia Cyber Job Completion</h3>
@@ -660,8 +747,11 @@
                         <div class="cert-icon">
                             <img
                                 src="Asset/OCI_foundation_Associate.png"
-                                alt="☁️"
+                                alt="Oracle Cloud Infrastructure 2025 Foundation Associate certification badge"
                                 class="lazy"
+                                loading="lazy"
+                                width="80"
+                                height="80"
                             />
                         </div>
                         <h3>
@@ -675,8 +765,11 @@
                         <div class="cert-icon">
                             <img
                                 src="Asset/OCI_Networking_profession.png"
-                                alt="☁️"
+                                alt="Oracle Cloud Infrastructure 2025 Networking Professional certification badge"
                                 class="lazy"
+                                loading="lazy"
+                                width="80"
+                                height="80"
                             />
                         </div>
                         <h3>
@@ -1043,6 +1136,7 @@
                         id="contactForm"
                         action="https://formspree.io/f/maqpygqr"
                         method="POST"
+                        aria-label="Contact form"
                     >
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -1051,6 +1145,8 @@
                                 id="name"
                                 name="name"
                                 placeholder="Enter your name"
+                                required
+                                autocomplete="name"
                             />
                         </div>
                         <div class="form-group">
@@ -1060,6 +1156,8 @@
                                 id="email"
                                 name="email"
                                 placeholder="Enter your email"
+                                required
+                                autocomplete="email"
                             />
                         </div>
                         <div class="form-group">
@@ -1068,6 +1166,8 @@
                                 id="message"
                                 name="message"
                                 placeholder="Write your message..."
+                                required
+                                rows="5"
                             ></textarea>
                         </div>
                         <button
@@ -1092,10 +1192,30 @@
                     <a
                         href="https://www.linkedin.com/in/tebello-masike-0501b3313"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit Tebello Masike on LinkedIn"
                         >LinkedIn</a
                     >
-                    <a href="mailto:tebellomasike101@gmail.com" target="_blank"
+                    <a 
+                        href="mailto:tebellomasike101@gmail.com" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Send email to Tebello Masike"
                         >Email</a
+                    >
+                    <a 
+                        href="https://github.com/Tebellomasike" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit Tebello Masike on GitHub"
+                        >GitHub</a
+                    >
+                    <a 
+                        href="https://tryhackme.com/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit Tebello Masike on TryHackMe"
+                        >TryHackMe</a
                     >
                 </div>
             </div>
