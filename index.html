@@ -1,0 +1,1502 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tebello Masike — Cybersecurity and Data Science Portfolio</title>
+        <meta
+            name="description"
+            content="Tebello Masike — Cybersecurity Enthusiast. Data Scientist Enthusiast, Penetration testing, cloud security, incident response, and threat hunting. Based in Lesotho."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <!-- Animated Grid Background -->
+        <div class="bg-grid" aria-hidden="true"></div>
+
+        <!-- Falling colored lines (matrix-rain ambient layer) -->
+        <div class="bg-lines" aria-hidden="true">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="bg-scanline" aria-hidden="true"></div>
+
+        <!-- Scroll progress bar -->
+        <div
+            class="scroll-progress"
+            id="scrollprogress"
+            aria-hidden="true"
+        ></div>
+
+        <!-- Skip to content for accessibility -->
+        <a href="#hero" class="skip-link">Skip to main content</a>
+
+        <!-- NAVBAR -->
+        <nav
+            class="navbar"
+            id="navbar"
+            role="navigation"
+            aria-label="Main navigation"
+        >
+            <div class="container">
+                <a href="#hero" class="nav-logo">TM<span>.</span></a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div
+                    class="hamburger"
+                    id="hamburger"
+                    aria-label="Toggle-menu"
+                    role="button"
+                    tabindex="0"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Cycle theme: light, glow, dark"
+                >
+                    <span class="toggle-icon sun-icon">☀️</span>
+                    <span class="toggle-icon moon-icon">🌙</span>
+                    <span class="toggle-icon sparkle-icon">✨</span>
+                    <span class="toggle-label">Glow</span>
+                </button>
+            </div>
+        </nav>
+
+        <!--    ME  -->
+        <section class="hero section" id="hero" tabindex="-1">
+            <div class="hero-network" aria-hidden="true"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-prompt">
+                        <span class="path">guest@tebello-masike</span
+                        ><span class="arrow">:</span><span>~</span
+                        ><span class="path">$</span>
+                        <span id="heroPromptCmd">whoami</span>
+                    </div>
+                    <div class="hero-badge">
+                        <span class="dot"></span> Available for opportunities
+                    </div>
+                    <h1 class="glitch">
+                        TEBELLO <span class="gradient-text">MASIKE</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Cybersecurity, DevOps &amp; Data Science Enthusiast
+                    </p>
+                    <div class="typing-wrapper">
+                        <span class="typing-prefix" aria-hidden="true">$</span>
+                        <span class="typing-text" id="typingText"></span
+                        ><span class="typing-cursor" aria-hidden="true"></span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary"
+                            >⚡ View Projects</a
+                        >
+                        <button class="btn btn-outline" id="heroGamesBtn">
+                            🔐 Crack the Code
+                        </button>
+                        <a href="#contact" class="btn btn-primary"
+                            >✉ Contact Me</a
+                        >
+                        </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="num">30+</span>
+                            <span class="label">Vulns Found</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="num">2</span>
+                            <span class="label">Research Papers</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="num">8+</span>
+                            <span class="label">Projects Shipped</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span>SCROLL</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!--  ABOUT  -->
+        <section class="section" id="about">
+        <div class="container"><section class="hero section" id="hero" tabindex="-1">
+                    <div class="hero-network" aria-hidden="true"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                <div class="section-header reveal">
+                    <h2>ABOUT ME</h2>
+                    <p>Defending the digital frontier from Lesotho</p>
+                    <div class="line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image-wrapper reveal">
+                        <div class="about-image-frame">
+                            <img
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 467'%3E%3Crect fill='%23070a0f' width='350' height='467'/%3E%3C/svg%3E"
+                                data-src="Asset/profile.jpeg"
+                                alt="Tebello Masike"
+                                class="about-image lazy"
+                                id="profileImg"
+                            />
+                        </div>
+                        <div class="meta">
+                            <span><span class="dot">●</span> online</span>
+                            <span>Lesotho 🇱🇸</span>
+                        </div>
+                    </div>
+                    <div class="about-text reveal">
+                        <p>
+                            Motivated Cybersecurity and Data Science enthusiast
+                            with a Bachelor of Science in Computer Science and
+                            Physics, ISC² certification, and hands-on expertise
+                            in
+                            <strong>penetration testing</strong>,
+                            <strong>incident response</strong>,
+                            <strong>threat hunting</strong>,
+                            <strong>machine learning</strong>,
+                            <strong>data wrangling</strong>,
+                            <strong>statistical modeling</strong>,
+                            <strong>data visualization</strong> and
+                            <strong>secure cloud infrastructure</strong>.
+                        </p>
+                        <p>
+                            Currently developing an automated CI/CD Pipeline
+                            Exposure Management Tool aligned with 2025
+                            Continuous Exposure Management (CEM) principles.
+                            Excelled in Hackathon challenges, including
+                            <strong>Top 3 placement</strong> in Lesotho's 2025
+                            Cybersecurity Hackathon.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">30+</div>
+                                <div class="stat-label">
+                                    Vulnerabilities Found
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">
+                                    SIEM Events Analyzed
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">10</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  SKILLS  -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header center reveal">
+                    <h2>TECHNICAL SKILLS</h2>
+                    <p>Tools and technologies I work with daily</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div
+                    class="skills-filter reveal"
+                    role="tablist"
+                    aria-label="Filter skills by category"
+                >
+                    <button
+                        class="filter-btn"
+                        data-filter="all"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        All
+                    </button>
+                    <button
+                        class="filter-btn active"
+                        data-filter="programming"
+                        role="tab"
+                        aria-selected="true"
+                    >
+                        Programming
+                    </button>
+                    <button
+                        class="filter-btn"
+                        data-filter="security"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        Security
+                    </button>
+                    <button
+                        class="filter-btn"
+                        data-filter="cloud"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        Cloud
+                    </button>
+                    <button
+                        class="filter-btn"
+                        data-filter="data"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        Data
+                    </button>
+                </div>
+                <div class="skills-grid">
+                    <!-- Programming & Development -->
+                    <div
+                        class="skill-category reveal"
+                        data-category="programming"
+                    >
+                        <div class="skill-category-icon">⟨/⟩</div>
+                        <h3>PROGRAMMING & DEVELOPMENT</h3>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span
+                                ><span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"
+                                    >JavaScript / React.js</span
+                                ><span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span
+                                ><span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C++</span
+                                ><span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML / CSS</span
+                                ><span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity & Networking -->
+                    <div class="skill-category reveal" data-category="security">
+                        <div class="skill-category-icon">⌘</div>
+                        <h3>CYBERSECURITY & NETWORKING</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Nmap</span
+                                ><span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"
+                                    >Kali Linux / Metasploit</span
+                                ><span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Wireshark</span
+                                ><span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SIEM Log Analysis</span
+                                ><span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Firewalls & IDS</span
+                                ><span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & Infrastructure -->
+                    <div class="skill-category reveal" data-category="cloud">
+                        <div class="skill-category-icon">⚙</div>
+                        <h3>DEVOPS &amp; CLOUD</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"
+                                    >Oracle Cloud (OCI)</span
+                                ><span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span
+                                ><span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">IAM & WAF</span
+                                ><span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"
+                                    >Trivy / Grype / Nikto</span
+                                ><span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Science -->
+                    <div class="skill-category reveal" data-category="data">
+                        <div class="skill-category-icon">∑</div>
+                        <h3>DATA SCIENCE & ANALYTICS</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python / R / SQL</span
+                                ><span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"
+                                    >Jupyter / Matplotlib</span
+                                ><span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Machine Learning</span
+                                ><span class="skill-percent">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"
+                                    >Power BI / Tableau</span
+                                ><span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  PROJECTS  -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>PROJECTS & EXPERIENCE</h2>
+                    <p>Hands-on work and research</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="timeline">
+                    <!-- CEM Platform -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="devops">
+                            <span class="timeline-date"
+                                >June 2026 — Present</span
+                            >
+                            <h3>CEM Platform — Omni-Environment Exposure Management</h3>
+                            <div class="timeline-tools">
+                                <span class="tool-tag">FastAPI</span>
+                                <span class="tool-tag">React</span>
+                                <span class="tool-tag">TypeScript</span>
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">PostgreSQL</span>
+                                <span class="tool-tag">Docker</span>
+                                <span class="tool-tag">Celery</span>
+                                <span class="tool-tag">Trivy</span>
+                                <span class="tool-tag">Grype</span>
+                                <span class="tool-tag">Semgrep</span>
+                                <span class="tool-tag">Kubernetes</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Built a unified vulnerability intelligence hub
+                                    integrating 16+ security scanners (Trivy, Grype,
+                                    Semgrep, Gitleaks, Nuclei, Prowler, ZAP, Checkov)
+                                    across containers, Kubernetes, cloud VMs, and
+                                    CI/CD pipelines
+                                </li>
+                                <li>
+                                    Implemented PURL-based cross-environment
+                                    deduplication reducing alert fatigue by 70%+
+                                    across multi-cloud assets
+                                </li>
+                                <li>
+                                    Developed agentless VM scanning with DSPM
+                                    (PII/PCI/PHI classification) using EBS snapshot
+                                    pipelines and YARA/Regex rules
+                                </li>
+                                <li>
+                                    Built Exposure Topology graph with Apache AGE
+                                    mapping attack paths from CVEs through
+                                    environments to business services
+                                </li>
+                                <li>
+                                    Implemented Push Protection via pre-receive hooks
+                                    blocking secrets and vulnerable dependencies
+                                    before they enter Git history
+                                </li>
+                                <li>
+                                    Orchestrated Security Campaigns with Gemini-powered
+                                    autofix PR generation and burn-down tracking
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phishing SOAR Pipeline -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="devops">
+                            <span class="timeline-date">July 2026</span>
+                            <h3>Phishing SOAR Pipeline</h3>
+                            <div class="timeline-tools">
+                                <span class="tool-tag">n8n</span>
+                                <span class="tool-tag">Gmail API</span>
+                                <span class="tool-tag">VirusTotal</span>
+                                <span class="tool-tag">Gemini</span>
+                                <span class="tool-tag">PostgreSQL</span>
+                                <span class="tool-tag">Google Sheets</span>
+                                <span class="tool-tag">JavaScript</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Built an n8n-based SOAR pipeline for automated
+                                    phishing email detection, triage, and response
+                                    triggered from Gmail inbox
+                                </li>
+                                <li>
+                                    Integrated VirusTotal URL scanning and WHOIS
+                                    domain age lookup for threat intelligence
+                                    enrichment
+                                </li>
+                                <li>
+                                    Implemented Gemini LLM-powered phishing analysis
+                                    with structured JSON parsing and severity
+                                    routing (Low/Medium/High/Critical)
+                                </li>
+                                <li>
+                                    Built human-in-the-loop (HITL) wait nodes for
+                                    Medium+ severity with automatic eDiscovery case
+                                    creation for Critical alerts
+                                </li>
+                                <li>
+                                    Added pre-analysis safe check bypassing
+                                    SPF+DKIM+DMARC-passing emails to silent audit
+                                    log
+                                </li>
+                                <li>
+                                    Wired dual persistence to PostgreSQL and Google
+                                    Sheets for dashboard-ready audit trails
+                                </li>
+                            </ul>
+                            <a
+                                href="https://github.com/Tebellomasike/Phishing_Soar-"
+                                target="_blank"
+                                rel="noopener"
+                                class="btn-github"
+                            >
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Neovim Config -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="devops">
+                            <span class="timeline-date">Feb 2026</span>
+                            <h3>Personal IDE Config — Neovim</h3>
+
+                            <div class="timeline-tools">
+                                <span class="tool-tag">Lua</span>
+                                <span class="tool-tag">Neovim</span>
+                                <span class="tool-tag">LazyVim</span>
+                                <span class="tool-tag">LSP</span>
+                                <span class="tool-tag">Treesitter</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Crafted a personalized Neovim configuration
+                                    with LazyVim plugin manager, LSP
+                                    auto-completion, and Treesitter syntax
+                                    highlighting
+                                </li>
+                                <li>
+                                    Optimized keybindings and workflow for
+                                    cybersecurity scripting, data analysis, and
+                                    full-stack development
+                                </li>
+                                <li>
+                                    Documented the setup process for easy
+                                    reproducibility across environments
+                                </li>
+                            </ul>
+                            <a
+                                href="https://github.com/Tebellomasike/Personal-IDE-Config-Neovim"
+                                target="_blank"
+                                rel="noopener"
+                                class="btn-github"
+                            >
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Timed Exam App -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="programming">
+                            <span class="timeline-date"
+                                >Jan 2026 — Feb 2026</span
+                            >
+                            <h3>Timed Exam Application</h3>
+
+                            <div class="timeline-tools">
+                                <span class="tool-tag">Python (Flask)</span>
+                                <span class="tool-tag">JavaScript</span>
+                                <span class="tool-tag">SQLite</span>
+                                <span class="tool-tag">Google Sheets API</span>
+                                <span class="tool-tag">Vercel</span>
+                                <span class="tool-tag">Render</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Developed a full-stack exam platform
+                                    supporting multiple question types (MCQ,
+                                    Multiple-select, True/False) with instant
+                                    scoring and results persistence
+                                </li>
+                                <li>
+                                    Implemented a robust timing system with a
+                                    countdown timer, progress tracking, and a
+                                    question navigator for seamless user
+                                    experience
+                                </li>
+                                <li>
+                                    Engineered anti-cheat mechanisms including
+                                    tab visibility detection and auto-submission
+                                    upon timeout or unauthorized navigation
+                                </li>
+                                <li>
+                                    Integrated Google Sheets API for real-time
+                                    result backup and a Flask-based backend for
+                                    persistent score history via SQLite
+                                </li>
+                            </ul>
+                            <a
+                                href="https://github.com/Tebellomasike/online-exam"
+                                target="_blank"
+                                rel="noopener"
+                                class="btn-github"
+                            >
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Searching from the Terminal -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="devops">
+                            <span class="timeline-date">Mar 2026</span>
+                            <h3>Searching from the Terminal</h3>
+                            <div class="timeline-tools">
+                                <span class="tool-tag">ddgr</span>
+                                <span class="tool-tag">w3m</span>
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">Shell</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    A DuckDuckGo terminal search tool using
+                                    <code>ddgr</code> and <code>w3m</code> for
+                                    browsing and opening results in a text-based
+                                    browser
+                                </li>
+                                <li>
+                                    Provides numbered search results with
+                                    interactive navigation — enter a number to
+                                    open in w3m, <code>r</code> for a new
+                                    search, <code>q</code> to quit
+                                </li>
+                                <li>
+                                    Bridges the gap between the terminal and web
+                                    browsing for a distraction-free workflow
+                                </li>
+                            </ul>
+                            <a
+                                href="https://github.com/Tebellomasike/Searching-from-the-terminal"
+                                target="_blank"
+                                rel="noopener"
+                                class="btn-github"
+                            >
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Home Lab Penetration Test -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="security">
+                            <span class="timeline-date"
+                                >Jun 2025 — Jul 2025</span
+                            >
+                            <h3>Home Lab Penetration Test</h3>
+                            <div class="timeline-tools">
+                                <span class="tool-tag">Kali Linux</span>
+                                <span class="tool-tag">Metasploitable</span>
+                                <span class="tool-tag">Nmap</span>
+                                <span class="tool-tag">Metasploit</span>
+                                <span class="tool-tag">John the Ripper</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Designed and deployed a multi-host
+                                    vulnerable network environment (10+
+                                    hosts/services) using Kali Linux and
+                                    Metasploitable
+                                </li>
+                                <li>
+                                    Executed full penetration testing lifecycle
+                                    — reconnaissance, scanning, exploitation,
+                                    and post-exploitation — compromising 80% of
+                                    20+ targets
+                                </li>
+                                <li>
+                                    Leveraged SIEM tools for log analysis and
+                                    developed a 2-page report with 5+ actionable
+                                    countermeasures
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- OWASP Web Security Assessment -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="security">
+                            <span class="timeline-date">Aug 2025</span>
+                            <h3>OWASP Web Security Assessment</h3>
+                            <div class="timeline-tools">
+                                <span class="tool-tag">OWASP Juice Shop</span>
+                                <span class="tool-tag">Docker</span>
+                                <span class="tool-tag">Trivy</span>
+                                <span class="tool-tag">Nikto</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Conducted comprehensive penetration testing
+                                    on OWASP Juice Shop using OWASP methodology
+                                </li>
+                                <li>
+                                    Identified 5+ critical vulnerabilities
+                                    including SQL injection, XSS, and
+                                    authentication bypasses
+                                </li>
+                                <li>
+                                    Generated detailed assessment reports with
+                                    risk ratings and remediation recommendations
+                                    for 8+ findings
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Secure Portfolio Website Development -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="devops">
+                            <span class="timeline-date"
+                                >Jan 2025 — Mar 2025</span
+                            >
+                            <h3>Secure Portfolio Website Development</h3>
+                            <div class="timeline-tools">
+                                <span class="tool-tag">HTML5</span>
+                                <span class="tool-tag">CSS</span>
+                                <span class="tool-tag">JavaScript</span>
+                                <span class="tool-tag">React.js</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Built a responsive cybersecurity portfolio
+                                    site implementing secure coding practices
+                                    and input validation that reduced potential
+                                    vulnerabilities by 50%
+                                </li>
+                                <li>
+                                    Applied DevOps and continuous integration
+                                    practices, achieving 99% uptime over 3
+                                    months
+                                </li>
+                            </ul>
+                            <a
+                                href="https://github.com/Tebellomasike/online-exam"
+                                target="_blank"
+                                rel="noopener"
+                                class="btn-github"
+                            >
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Lesotho Hackathon -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="security">
+                            <span class="timeline-date">Oct — Nov 2025</span>
+                            <h3>Lesotho 2nd Annual Cybersecurity Hackathon</h3>
+                            <div class="timeline-tools">
+                                <span class="tool-tag">CTF</span>
+                                <span class="tool-tag">Social Engineering</span>
+                                <span class="tool-tag">Attack & Defense</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Collaborated on a team that advanced to the
+                                    <strong>Top 3 finals</strong>
+                                </li>
+                                <li>
+                                    Solved challenges in Jeopardy-style CTFs,
+                                    social engineering, attack-and-defense
+                                    scenarios, and threat simulation
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Deloitte Simulation -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card" data-cat="security">
+                            <span class="timeline-date">Jul 2025</span>
+                            <h3>
+                                Deloitte Australia Cyber Job Simulation (Forage)
+                            </h3>
+                            <ul>
+                                <li>
+                                    Handled 10+ simulated cyber incidents in a
+                                    virtual enterprise environment
+                                </li>
+                                <li>
+                                    Gained practical exposure to incident
+                                    response and security operations
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  CERTIFICATIONS  -->
+        <section class="section" id="certifications">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>CERTIFICATIONS</h2>
+                    <p>Professional certifications and credentials</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="skills-filter reveal" role="tablist" aria-label="Filter certifications by category">
+                    <button class="filter-btn" data-filter="all" role="tab" aria-selected="false">All</button>
+                    <button class="filter-btn active" data-filter="cybersecurity" role="tab" aria-selected="true">Cybersecurity</button>
+                    <button class="filter-btn" data-filter="datascience" role="tab" aria-selected="false">Data Science</button>
+                </div>
+                <div class="certs-grid">
+                    <div class="cert-card reveal" data-category="cybersecurity">
+                        <div class="cert-icon">
+                            <img
+                                src="Asset/CompTIA.png"
+                                alt="🏅"
+                                class="lazy"
+                            />
+                        </div>
+                        <h3>CompTIA A+ Certification</h3>
+                        <p class="cert-date">Aug 2024 — Jan 2025</p>
+                    </div>
+
+                    <div class="cert-card reveal" data-category="cybersecurity">
+                        <div class="cert-icon">
+                            <img src="Asset/ICS2.png" alt="🔗" class="lazy" />
+                        </div>
+                        <h3>Certified in Cybersecurity (CC) by ISC²</h3>
+                        <p class="cert-date">Feb 2025 — Aug 2025</p>
+                    </div>
+
+                    <div class="cert-card reveal" data-category="cybersecurity">
+                        <div class="cert-icon">
+                            <img src="Asset/Cisco.png" alt="🌐" class="lazy" />
+                        </div>
+                        <h3>Introduction to Cybersecurity by NETCAD</h3>
+                        <p class="cert-date">March 2025</p>
+                    </div>
+
+                    <div class="cert-card reveal" data-category="cybersecurity">
+                        <div class="cert-icon">
+                            <img
+                                src="Asset/Job_sim.png"
+                                alt="📋"
+                                class="lazy"
+                            />
+                        </div>
+                        <h3>Deloitte Australia Cyber Job Completion</h3>
+                        <p class="cert-date">July 2025</p>
+                    </div>
+
+                    <div class="cert-card reveal" data-category="cybersecurity">
+                        <div class="cert-icon">
+                            <img
+                                src="Asset/OCI_foundation_Associate.png"
+                                alt="☁️"
+                                class="lazy"
+                            />
+                        </div>
+                        <h3>
+                            Oracle Cloud Infrastructure 2025 Foundation
+                            Associate
+                        </h3>
+                        <p class="cert-date">October 2025</p>
+                    </div>
+
+                    <div class="cert-card reveal" data-category="cybersecurity">
+                        <div class="cert-icon">
+                            <img
+                                src="Asset/OCI_Networking_profession.png"
+                                alt="☁️"
+                                class="lazy"
+                            />
+                        </div>
+                        <h3>
+                            Oracle Cloud Infrastructure 2025 Networking
+                            Profession
+                        </h3>
+                        <p class="cert-date">October 2025</p>
+                    </div>
+                    <div class="cert-card reveal" data-category="cybersecurity">
+                        <div class="cert-icon">
+                            <img
+                                src="Asset/Cybersecurity with AI Bootcamp 2026.png"
+                                alt="☁️"
+                                class="lazy"
+                            />
+                        </div>
+                        <h3>
+                            Cybersecurity with AI Bootcamp 2026 by CloudSec Network
+                        </h3>
+                        <p class="cert-date">June 2026</p>
+                    </div>
+                    <div class="cert-card reveal" data-category="datascience">
+                        <div class="cert-icon">
+                            <img src="Asset/Intro_to_DataScience.png" alt="🔗" class="lazy" />
+                        </div>
+                        <h3>Introduction to Data Science</h3>
+                        <p class="cert-date"> Jun 2025</p>
+                    </div>
+                    <div class="cert-card reveal" data-category="datascience">
+                        <div class="cert-icon">
+                            <img src="Asset/completion_certificate.png" alt="🔗" class="lazy" />
+                        </div>
+                        <h3>Data Science Job Simulation</h3>
+                        <p class="cert-date">July 2025</p>
+                    </div>
+                    <div class="cert-card reveal" data-category="datascience">
+                        <div class="cert-icon">
+                            <img src="Asset/Data_Analytics_Essentials_certificate.png" alt="🔗" class="lazy" />
+                        </div>
+                        <h3>Data Analytics Essentials</h3>
+                        <p class="cert-date">August 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>EDUCATION</h2>
+                    <p>Academic foundation</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="education-card reveal">
+                    <div class="edu-icon">🎓</div>
+                    <h3>National University of Lesotho</h3>
+                    <div class="edu-degree">
+                        Bachelor of Science — Computer Science &amp; Physics
+                    </div>
+                    <div class="edu-date">August 2020 — June 2024</div>
+                    <div class="edu-details">
+                        <p>
+                            <strong>Relevant Coursework:</strong> Networks, Data
+                            Structures &amp; Algorithms, Operating Systems,
+                            Expert Systems, Cryptography &amp; Network Security
+                        </p>
+                        <p style="margin-top: 8px">
+                            Second Class Second Division (2:2)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  RESEARCH  -->
+        <section class="section" id="research">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>RESEARCH</h2>
+                    <p>Academic research and publications</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="research-grid">
+                    <div class="research-card reveal">
+                        <div class="research-card-accent learning"></div>
+                        <div class="research-card-content">
+                            <div class="research-card-header">
+                                <div class="research-meta">
+                                    <span class="research-badge">
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"
+                                            />
+                                            <path
+                                                d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+                                            />
+                                        </svg>
+                                        Cognitive Science
+                                    </span>
+                                </div>
+                                <h3>
+                                    Mastering Complex Domains: A Daily Learning
+                                    Framework For Physics and Programming
+                                </h3>
+                            </div>
+                            <p class="research-abstract">
+                                Mastering cognitively demanding fields, such as
+                                physics and programming, requires more than rote
+                                repetition; it demands a structured approach
+                                that aligns with human cognitive architecture.
+                                This report synthesizes findings from cognitive
+                                science and pedagogical research to present a
+                                daily three-phase workflow: Pre-study, Active
+                                study, and post-study. By integrating cognitive
+                                load theory (CLT) and Variation Theory, the
+                                framework optimizes the management of intrinsic
+                                and extraneous loads while fostering the
+                                development of qualitative mental models and
+                                robust logical structures.
+                                <br /><br />
+                                Key highlights include the use of faded worked
+                                examples to transition from novice to expert
+                                performance, the "Bear Hunter System" (BHS) for
+                                conceptual chunking, and generative
+                                self-explanation to deepen the understanding.
+                            </p>
+                            <a
+                                href="Asset/Mastering Complex Domains.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="view-code"
+                            >
+                                View Research Paper
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                    />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="research-card reveal">
+                        <div class="research-card-accent finance"></div>
+                        <div class="research-card-content">
+                            <div class="research-card-header">
+                                <div class="research-meta">
+                                    <span class="research-badge">
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <line
+                                                x1="12"
+                                                y1="1"
+                                                x2="12"
+                                                y2="23"
+                                            />
+                                            <path
+                                                d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                                            />
+                                        </svg>
+                                        Quantitative Finance
+                                    </span>
+                                    <span class="research-badge">
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <polyline
+                                                points="16 18 22 12 16 6"
+                                            />
+                                            <polyline points="8 6 2 12 8 18" />
+                                        </svg>
+                                        Machine Learning
+                                    </span>
+                                    <span class="research-badge">
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                            />
+                                        </svg>
+                                        Statistical Modeling
+                                    </span>
+                                </div>
+                                <h3>
+                                    Evaluation of Statistical Arbitrage Models
+                                    For Financial Markets
+                                </h3>
+                            </div>
+                            <p class="research-abstract">
+                                Several studies in the 90s and early 2000s have
+                                shown a decline in the profitability of pairs
+                                trading. It is not known whether this decline
+                                will continue further in the future or come and
+                                go. It has, therefore, become imperative to
+                                periodically evaluate the efficacy of the pairs
+                                trading approaches. Pairs trading generally has
+                                a number of approaches that include, but not
+                                limited to, (i) codistanced approach, (ii)
+                                cointegrated approach, (iii) time-series
+                                approach, (iv) stochastic control approach, (v)
+                                machine learning approach, (vi) copula approach,
+                                and (vii) principal component analysis (PCA)
+                                approach.
+                                <br /><br />
+                                Key highlights include the use of machine
+                                learning integration in pairs trading for
+                                adaptive strategy optimisation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  COMMUNITY & TEACHING  -->
+        <section class="section" id="community">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>COMMUNITY & TEACHING</h2>
+                    <p>
+                        Giving back through education and community engagement
+                    </p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="community-grid">
+                    <div class="community-card reveal">
+                        <div class="card-icon">👨‍🏫</div>
+                        <h3>COMPUTATIONAL THINKERS & DATA EXPERTS</h3>
+                        <div class="card-role">
+                            Online Coding Master Class · 2023 — Present
+                        </div>
+                        <p>
+                            Designing and delivering inclusive,
+                            beginner-friendly online masterclasses on
+                            Programming, Web Design, Cybersecurity basics,
+                            Graphics Design, and Data Science &amp; Analytics.
+                            Facilitating 3 live sessions per week and mentoring
+                            aspiring tech enthusiasts through hands-on projects.
+                        </p>
+                    </div>
+
+                    <div class="community-card reveal">
+                        <div class="card-icon">🧑‍💻</div>
+                        <h3>OOP PEER TUTOR</h3>
+                        <div class="card-role">
+                            National University of Lesotho · 2022 — 2023
+                        </div>
+                        <p>
+                            Delivered regular tutoring sessions and practical
+                            labs that strengthened students' programming skills,
+                            covering classes, inheritance, polymorphism, and
+                            encapsulation concepts.
+                        </p>
+                    </div>
+
+                    <div class="community-card reveal">
+                        <div class="card-icon">🛒</div>
+                        <h3>
+                            <a
+                                href="https://haemall.web.app/"
+                                target="_blank"
+                                rel="noopener"
+                                >HAE MALL — LESOTHO'S LOCAL ONLINE
+                                MARKETPLACE</a
+                            >
+                        </h3>
+                        <div class="card-role">
+                            Collaborator & Contributor · 2025 — Present
+                        </div>
+                        <p>
+                            Collaborating on Lesotho's first locally created
+                            online shopping platform connecting local stores,
+                            artisans, and small businesses with customers,
+                            enabling digital market access for Basotho
+                            entrepreneurs.
+                        </p>
+                    </div>
+
+                    <div class="community-card reveal">
+                        <div class="card-icon">⚖️</div>
+                        <h3>DIGITAL RIGHTS ACADEMY LESOTHO</h3>
+                        <div class="card-role">Participant · November 2025</div>
+                        <p>
+                            Engaged with experts and 40+ participants on digital
+                            rights, internet access challenges, practical
+                            advocacy skills, and policy engagement to champion
+                            digital inclusion and protection in Lesotho.
+                        </p>
+                    </div>
+
+                    <div class="community-card reveal">
+                        <div class="card-icon">🔒</div>
+                        <h3>CYBERSECURITY & DIGITAL LITERACY VOLUNTEER</h3>
+                        <div class="card-role">
+                            Ha-Abia High School · January 2026
+                        </div>
+                        <p>
+                            Organized and delivered free cybersecurity awareness
+                            workshops on phishing prevention, strong password
+                            practices, and safe social media use for 150+
+                            high-school students. Created beginner-friendly
+                            educational materials.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  CONTACT  -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-header center reveal">
+                    <div class="pre">contact</div>
+                    <h2>&gt; Let's <span class="accent">Connect</span></h2>
+                    <div class="line"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h3>// contact_info</h3>
+                        <div class="contact-item">
+                            <a
+                                href="https://wa.me/26657181105"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <img src="Asset/phone.png" alt="WhatsApp" />
+                                <div>
+                                    <div class="label">WhatsApp</div>
+                                    <div class="value">(+266) 57181105</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a
+                                href="mailto:tebellomasike101@gmail.com"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <img src="Asset/gmail.png" alt="Gmail" />
+                                <div>
+                                    <div class="label">Email</div>
+                                    <div class="value">
+                                        tebellomasike101@gmail.com
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a
+                                href="https://www.linkedin.com/in/tebello-masike-0501b3313"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <img src="Asset/Linkendin.png" alt="LinkedIn" />
+                                <div>
+                                    <div class="label">LinkedIn</div>
+                                    <div class="value">Tebello Masike</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a
+                                href="https://github.com/Tebellomasike"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <img src="Asset/github.png" alt="GitHub" />
+                                <div>
+                                    <div class="label">GitHub</div>
+                                    <div class="value">Tebellomasike</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="meta">
+                            <div>
+                                <strong>LANGUAGES</strong> English (Fluent),
+                                Sesotho (Native)
+                            </div>
+                            <div>
+                                <strong>PLATFORMS</strong> TryHackMe ·
+                                HackTheBox · Crybary · Infinity Learning
+                            </div>
+                        </div>
+                    </div>
+                    <form
+                        class="contact-form reveal"
+                        id="contactForm"
+                        action="https://formspree.io/f/maqpygqr"
+                        method="POST"
+                    >
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <div class="input-wrap">
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="your name"
+                                    autocomplete="name"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <div class="input-wrap">
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@gmail.com"
+                                    autocomplete="email"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="// write your message..."
+                            ></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn-primary form-submit"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>
+                        &copy; 2026 <span>Tebello Masike</span>
+                    </p>
+                    <div class="footer-links">
+                        <a
+                            href="https://www.linkedin.com/in/tebello-masike-0501b3313"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <img src="Asset/Linkendin.png" alt="LinkedIn" />
+                            LinkedIn
+                        </a>
+                        <a
+                            href="mailto:tebellomasike101@gmail.com"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <img src="Asset/gmail.png" alt="Email" />
+                            Email
+                        </a>
+                        <a
+                            href="https://github.com/Tebellomasike"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <img src="Asset/github.png" alt="GitHub" />
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- GAMES MODAL -->
+        <div class="modal-overlay" id="gameModal">
+            <div class="modal-content game-modal">
+                <button class="modal-close" id="closeGame">&times;</button>
+                <h2>Crack the Code</h2>
+                <p class="game-instructions">
+                    I'm thinking of a number between 1 and 100. Can you guess
+                    it?
+                </p>
+                <div class="game-display">
+                    <span>Attempts: <span id="attemptCount">0</span>/10</span>
+                </div>
+                <div class="game-input-group">
+                    <input
+                        type="number"
+                        id="guessInput"
+                        min="1"
+                        max="100"
+                        placeholder="Enter your guess"
+                    />
+                    <button class="btn btn-primary game-btn" id="submitGuess">
+                        Guess
+                    </button>
+                </div>
+                <p class="game-feedback" id="gameFeedback"></p>
+                <button class="btn btn-outline game-btn hidden" id="playAgain">
+                    Play Again
+                </button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
