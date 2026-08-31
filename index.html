@@ -152,7 +152,7 @@
                         <div class="hero-content">
                 <div class="section-header reveal">
                     <h2>ABOUT ME</h2>
-                    <p>Defending the digital frontier from Lesotho</p>
+                    <p> <strong>That I touch I change</strong></p>
                     <div class="line"></div>
                 </div>
                 <div class="about-grid">
@@ -175,7 +175,7 @@
                         <p>
                             Motivated Cybersecurity and Data Science enthusiast
                             with a Bachelor of Science in Computer Science and
-                            Physics, ISC² certification, and hands-on expertise
+                            Physics, ISC² certification, Oracle certifications and hands-on expertise
                             in
                             <strong>penetration testing</strong>,
                             <strong>incident response</strong>,
@@ -186,15 +186,6 @@
                             <strong>data visualization</strong> and
                             <strong>secure cloud infrastructure</strong>.
                         </p>
-                        <p>
-                            Currently developing an automated CI/CD Pipeline
-                            Exposure Management Tool aligned with 2025
-                            Continuous Exposure Management (CEM) principles.
-                            Excelled in Hackathon challenges, including
-                            <strong>Top 3 placement</strong> in Lesotho's 2025
-                            Cybersecurity Hackathon.
-                        </p>
-
                         <div class="about-stats">
                             <div class="stat-card">
                                 <div class="stat-number">30+</div>
@@ -484,57 +475,119 @@
                     <!-- CEM Platform -->
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-card" data-cat="devops">
-                            <span class="timeline-date"
-                                >June 2026 — Present</span
-                            >
-                            <h3>CEM Platform — Omni-Environment Exposure Management</h3>
-                            <div class="timeline-tools">
-                                <span class="tool-tag">FastAPI</span>
-                                <span class="tool-tag">React</span>
-                                <span class="tool-tag">TypeScript</span>
-                                <span class="tool-tag">Python</span>
-                                <span class="tool-tag">PostgreSQL</span>
-                                <span class="tool-tag">Docker</span>
-                                <span class="tool-tag">Celery</span>
-                                <span class="tool-tag">Trivy</span>
-                                <span class="tool-tag">Grype</span>
-                                <span class="tool-tag">Semgrep</span>
-                                <span class="tool-tag">Kubernetes</span>
+                        <div class="cem-entry-grid">
+                            <div class="timeline-card" data-cat="devops">
+                                <span class="timeline-date"
+                                    >June 2026 — Present</span
+                                >
+                                <h3>CEM Platform — Continuous Exposure Management</h3>
+                                <div class="timeline-tools">
+                                    <span class="tool-tag">FastAPI</span>
+                                    <span class="tool-tag">React</span>
+                                    <span class="tool-tag">TypeScript</span>
+                                    <span class="tool-tag">Python</span>
+                                    <span class="tool-tag">PostgreSQL</span>
+                                    <span class="tool-tag">Redis</span>
+                                    <span class="tool-tag">Celery</span>
+                                    <span class="tool-tag">MinIO</span>
+                                    <span class="tool-tag">Cytoscape.js</span>
+                                    <span class="tool-tag">Trivy</span>
+                                    <span class="tool-tag">Prowler</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        Unified hub for 13 asset types (Docker, K8s, Helm,
+                                        Git repos, CI/CD, web apps, AWS/GCP/OCI, VMs,
+                                        serverless, data stores) dispatching 50+ curated
+                                        scanners in parallel — Trivy/Grype/Syft, Semgrep/
+                                        Betterleaks, Zizmor, Nmap/Playwright/ZAP/Nuclei/
+                                        Katana/FFuF, Prowler — with normalized schema
+                                    </li>
+                                    <li>
+                                        Implemented PURL normalization via
+                                        <em>packageurl-python</em> (40+ ecosystem aliases;
+                                        Trivy <code>pythonpip</code>/<code>nodejs</code> and
+                                        Grype <code>python</code>/<code>npm</code> produce
+                                        identical PURLs) enabling SHA-256 fingerprint
+                                        deduplication and 70%+ alert reduction
+                                    </li>
+                                    <li>
+                                        Built agentless VM scanning (EBS snapshot → volume
+                                        → mount → Trivy/Grype → cleanup) and DSPM for
+                                        S3/RDS/GCP Storage (regex + PII detectors) plus
+                                        Serverless config auditing for Lambda/GCP Functions
+                                    </li>
+                                    <li>
+                                        AI-based attack-path analysis (Gemini generates per-scan chains
+                                        from findings, aggregated via PostgreSQL topology
+                                        engine) visualized with Cytoscape.js (breadth-first
+                                        layout, severity-colored nodes); 8-factor risk scoring
+                                        (severity 25, CVSS 15, KEV 15, EPSS 10, blast radius
+                                        10, data sensitivity 10) with SLA deadlines
+                                    </li>
+                                    <li>
+                                        Enterprise RBAC (4 roles, 18 perms), TOTP 2FA with
+                                        recovery codes, organization isolation, and full
+                                        audit trail with filtering by action/actor/target
+                                    </li>
+                                    <li>
+                                        AI enrichment via Gemini/Gemma (Redis atomic rate-limit,
+                                        Markdown reports to MinIO + PostgreSQL, PDF via
+                                        WeasyPrint) and multi-channel notifications (Slack
+                                        Block Kit, PagerDuty, Jira, ServiceNow, email)
+                                    </li>
+                                </ul>
                             </div>
-                            <ul>
-                                <li>
-                                    Built a unified vulnerability intelligence hub
-                                    integrating 16+ security scanners (Trivy, Grype,
-                                    Semgrep, Gitleaks, Nuclei, Prowler, ZAP, Checkov)
-                                    across containers, Kubernetes, cloud VMs, and
-                                    CI/CD pipelines
-                                </li>
-                                <li>
-                                    Implemented PURL-based cross-environment
-                                    deduplication reducing alert fatigue by 70%+
-                                    across multi-cloud assets
-                                </li>
-                                <li>
-                                    Developed agentless VM scanning with DSPM
-                                    (PII/PCI/PHI classification) using EBS snapshot
-                                    pipelines and YARA/Regex rules
-                                </li>
-                                <li>
-                                    Built Exposure Topology graph with Apache AGE
-                                    mapping attack paths from CVEs through
-                                    environments to business services
-                                </li>
-                                <li>
-                                    Implemented Push Protection via pre-receive hooks
-                                    blocking secrets and vulnerable dependencies
-                                    before they enter Git history
-                                </li>
-                                <li>
-                                    Orchestrated Security Campaigns with Gemini-powered
-                                    autofix PR generation and burn-down tracking
-                                </li>
-                            </ul>
+                            <div class="cem-video-card video-card" data-cat="devops">
+                                <div class="cem-video-header">
+                                    <div class="cem-video-dots" aria-hidden="true">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <span class="cem-video-label">$ demo — cem-platform</span>
+                                </div>
+                                <div class="cem-video-wrap video-wrap">
+                                    <video
+                                        class="cem-video"
+                                        aria-label="CEM Platform demo video preview"
+                                        muted
+                                        loop
+                                        playsinline
+                                        preload="none"
+                                        poster="Assets/CEM_Preview.mp4"
+                                        data-src="assets/videos/cem-demo.mp4"
+                                    ></video>
+                                    <button
+                                        class="cem-video-play"
+                                        type="button"
+                                        aria-label="Play demo video"
+                                    >
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="6,3 20,12 6,21" fill="currentColor"></polygon></svg>
+                                    </button>
+                                </div>
+                                <a
+                                    class="cem-video-fallback"
+                                    href="assets/videos/cem-demo.mp4"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >Watch demo video
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
 

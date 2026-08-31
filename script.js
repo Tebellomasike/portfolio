@@ -537,4 +537,140 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   playAgain.addEventListener("click", initGame);
+
+  // =====================
+  // CEM VIDEO CARD — lazy-load + IntersectionObserver autoplay + play/pause
+  // =====================
+  (function initCemVideo() {
+    const video = document.querySelector(".cem-video");
+    if (!video) return;
+    const wrap = video.closest(".cem-video-wrap");
+    const card = document.querySelector(".cem-video-card");
+    const playBtn = wrap ? wrap.querySelector(".cem-video-play") : null;
+    if (!wrap || !playBtn || !card) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    let hasLoaded = false;
+
+    const PLAY_ICON =
+      '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="6,3 20,12 6,21" fill="currentColor"></polygon></svg>';
+    const PAUSE_ICON =
+      '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor"></rect><rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor"></rect></svg>';
+
+    function updateButton(isPlaying) {
+      if (isPlaying) {
+        playBtn.innerHTML = PAUSE_ICON;
+        playBtn.setAttribute("aria-label", "Pause demo video");
+      } else {
+        playBtn.innerHTML = PLAY_ICON;
+        playBtn.setAttribute("aria-label", "Play demo video");
+      }
+    }
+
+    function syncState() {
+      if (video.paused || video.ended) {
+        wrap.classList.remove("is-playing");
+        wrap.classList.add("is-paused");
+        updateButton(false);
+      } else {
+        wrap.classList.add("is-playing");
+        wrap.classList.remove("is-paused");
+        updateButton(true);
+      }
+    }
+
+    function ensureLoaded() {
+      if (hasLoaded) return;
+      const src = video.getAttribute("data-src");
+      if (src) {
+        video.src = src;
+        // keep poster attribute as-is (Assets/CEM_Preview.mp4 per spec)
+        video.load();
+      }
+      hasLoaded = true;
+      wrap.classList.add("is-paused");
+      syncState();
+    }
+
+    // Initial state: paused, show play button
+    wrap.classList.add("is-paused");
+    updateButton(false);
+
+    // Events to keep overlay in sync
+    video.addEventListener("play", syncState);
+    video.addEventListener("pause", syncState);
+    video.addEventListener("ended", syncState);
+
+    // Click toggles play/pause (wrap and button)
+    function togglePlayback() {
+      ensureLoaded();
+      // If reduced-motion, allow manual play but never autoplay
+      if (video.paused) {
+        const p = video.play();
+        if (p && typeof p.catch === "function") p.catch(function () {});
+      } else {
+        video.pause();
+      }
+    }
+
+    playBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      togglePlayback();
+    });
+
+    video.addEventListener("click", togglePlayback);
+    wrap.addEventListener("click", function (e) {
+      if (e.target === wrap) togglePlayback();
+    });
+
+    // Keyboard: Space / Enter on wrap triggers toggle (when focused)
+    wrap.setAttribute("tabindex", "-1");
+    playBtn.addEventListener("keydown", function (e) {
+      if (e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        togglePlayback();
+      }
+    });
+
+    // Lazy-load observer: load src when card first enters viewport (no eager fetch)
+    const lazyObserver = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            ensureLoaded();
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "0px" },
+    );
+    lazyObserver.observe(card);
+
+    // Autoplay observer: play when >=40% visible, pause when out — respects reduced-motion
+    if (!prefersReducedMotion) {
+      const autoObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!hasLoaded) return;
+            if (entry.intersectionRatio >= 0.4) {
+              if (video.paused) {
+                const pr = video.play();
+                if (pr && typeof pr.catch === "function") pr.catch(function () {});
+              }
+            } else {
+              if (!video.paused) video.pause();
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+      autoObserver.observe(wrap);
+    } else {
+      // Reduced motion: never autoplay, ensure paused and no observer
+      video.pause();
+    }
+  })();
 });
