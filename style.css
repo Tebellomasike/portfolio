@@ -2929,6 +2929,10 @@ img[data-src] {
     visibility: visible;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 .modal-content.game-modal {
     background: var(--bg-secondary);
     border: 1px solid var(--border);

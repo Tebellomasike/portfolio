@@ -459,6 +459,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const maxAttempts = 10;
   let gameActive = true;
 
+  function focusGuessInput() {
+    // Focus only once the overlay is actually visible: in this task it is
+    // still visibility:hidden, and default focus() scrolls the element into
+    // view (animated by html{scroll-behavior:smooth}).
+    const focusIt = () => {
+      if (gameModal.classList.contains("active")) {
+        guessInput.focus({ preventScroll: true });
+      }
+    };
+    if (getComputedStyle(gameModal).visibility === "visible") {
+      focusIt();
+      return;
+    }
+    gameModal.addEventListener("transitionend", focusIt, { once: true });
+    setTimeout(focusIt, 350);
+  }
+
+  function openGameModal() {
+    gameModal.classList.add("active");
+    document.body.classList.add("modal-open");
+    initGame();
+    focusGuessInput();
+  }
+
+  function closeGameModal() {
+    gameModal.classList.remove("active");
+    document.body.classList.remove("modal-open");
+    heroGamesBtn.focus({ preventScroll: true });
+  }
+
   function initGame() {
     targetNumber = Math.floor(Math.random() * 100) + 1;
     attempts = 0;
@@ -470,7 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gameFeedback.textContent = "";
     gameFeedback.className = "game-feedback";
     playAgain.classList.add("hidden");
-    guessInput.focus();
+    guessInput.focus({ preventScroll: true });
   }
 
   function submitGuessHandler() {
@@ -510,21 +540,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     guessInput.value = "";
-    guessInput.focus();
+    guessInput.focus({ preventScroll: true });
   }
 
-  heroGamesBtn.addEventListener("click", () => {
-    gameModal.classList.add("active");
-    initGame();
+  heroGamesBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openGameModal();
   });
 
   closeGame.addEventListener("click", () => {
-    gameModal.classList.remove("active");
+    closeGameModal();
   });
 
   gameModal.addEventListener("click", (e) => {
     if (e.target === gameModal) {
-      gameModal.classList.remove("active");
+      closeGameModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && gameModal.classList.contains("active")) {
+      closeGameModal();
     }
   });
 
