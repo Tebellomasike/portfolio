@@ -458,6 +458,23 @@ document.addEventListener("DOMContentLoaded", () => {
   let attempts = 0;
   const maxAttempts = 10;
   let gameActive = true;
+  let prevBodyOverflow = "";
+
+  function lockBodyScroll() {
+    prevBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+  }
+
+  function unlockBodyScroll() {
+    document.body.style.overflow = prevBodyOverflow;
+  }
+
+  function focusGuessInput() {
+    // Deferred + preventScroll: focusing while the overlay is still
+    // visibility:hidden is a no-op, and default focus() scrolls the
+    // element into view (smooth-animated by html{scroll-behavior:smooth}).
+    requestAnimationFrame(() => guessInput.focus({ preventScroll: true }));
+  }
 
   function initGame() {
     targetNumber = Math.floor(Math.random() * 100) + 1;
@@ -470,7 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gameFeedback.textContent = "";
     gameFeedback.className = "game-feedback";
     playAgain.classList.add("hidden");
-    guessInput.focus();
+    focusGuessInput();
   }
 
   function submitGuessHandler() {
@@ -510,21 +527,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     guessInput.value = "";
-    guessInput.focus();
+    guessInput.focus({ preventScroll: true });
   }
 
-  heroGamesBtn.addEventListener("click", () => {
+  function openGameModal() {
     gameModal.classList.add("active");
+    lockBodyScroll();
     initGame();
+  }
+
+  function closeGameModal() {
+    gameModal.classList.remove("active");
+    unlockBodyScroll();
+    heroGamesBtn.focus({ preventScroll: true });
+  }
+
+  heroGamesBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openGameModal();
   });
 
   closeGame.addEventListener("click", () => {
-    gameModal.classList.remove("active");
+    closeGameModal();
   });
 
   gameModal.addEventListener("click", (e) => {
     if (e.target === gameModal) {
-      gameModal.classList.remove("active");
+      closeGameModal();
     }
   });
 
