@@ -2921,12 +2921,15 @@ img[data-src] {
     z-index: 10000;
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0s linear 0.25s;
 }
 
-.modal-overlay.active {
+.modal-overlay.open {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.25s ease;
 }
 
 body.modal-open {
@@ -2947,7 +2950,7 @@ body.modal-open {
     transition: var(--transition);
 }
 
-.modal-overlay.active .modal-content.game-modal {
+.modal-overlay.open .modal-content.game-modal {
     transform: scale(1);
 }
 

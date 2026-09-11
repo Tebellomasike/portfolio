@@ -459,33 +459,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const maxAttempts = 10;
   let gameActive = true;
 
-  function focusGuessInput() {
-    // Focus only once the overlay is actually visible: in this task it is
-    // still visibility:hidden, and default focus() scrolls the element into
-    // view (animated by html{scroll-behavior:smooth}).
-    const focusIt = () => {
-      if (gameModal.classList.contains("active")) {
+  function openGameModal() {
+    gameModal.classList.add("open");
+    document.body.classList.add("modal-open");
+    gameModal.setAttribute("aria-hidden", "false");
+    initGame();
+    requestAnimationFrame(() => guessInput.focus({ preventScroll: true }));
+    setTimeout(() => {
+      if (gameModal.classList.contains("open")) {
         guessInput.focus({ preventScroll: true });
       }
-    };
-    if (getComputedStyle(gameModal).visibility === "visible") {
-      focusIt();
-      return;
-    }
-    gameModal.addEventListener("transitionend", focusIt, { once: true });
-    setTimeout(focusIt, 350);
-  }
-
-  function openGameModal() {
-    gameModal.classList.add("active");
-    document.body.classList.add("modal-open");
-    initGame();
-    focusGuessInput();
+    }, 320);
   }
 
   function closeGameModal() {
-    gameModal.classList.remove("active");
+    gameModal.classList.remove("open");
     document.body.classList.remove("modal-open");
+    gameModal.setAttribute("aria-hidden", "true");
     heroGamesBtn.focus({ preventScroll: true });
   }
 
@@ -559,7 +549,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && gameModal.classList.contains("active")) {
+    if (e.key === "Escape" && gameModal.classList.contains("open")) {
       closeGameModal();
     }
   });
